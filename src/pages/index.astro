@@ -1,32 +1,113 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Nabvar from '../components/Nabvar.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Nabvar from "../components/Nabvar.astro";
+import Footer from "../components/Footer.astro";
+import Body from "./body.astro";
+
 ---
 
 <Layout title="TESIS CLOUD">
   <!-- El menú de navegación está dentro del header -->
-   <Nabvar/>
+  <Nabvar />
 
-
-  <!-- El contenido principal está dentro de main -->
-  <main class="bg-green-800 bg-cover bg-center" style="background-image: url('/img/img2.jpg');">
-    <!-- Sección Inicio -->
-    <section id="home" class="flex items-center justify-center min-h-screen p-8">
+ 
+  <main
+    class="bg-green-800 bg-cover bg-center"
+    style="background-image: url('/img/img2.jpg');"
+  >
+     
+    <section
+      id="home"
+      class="flex items-center justify-center min-h-screen p-8"
+    >
       <div class="p-8 bg-white rounded-lg shadow-lg">
-        <h1 class="text-3xl font-bold text-center text-blue-600">Bienvenido a Tesis Cloud</h1>
-        <p class="mt-4 text-center text-gray-700">Sube, comparte y explora tesis en línea con facilidad.</p>
+        <h1 class="text-3xl font-bold text-center text-blue-600">
+          Bienvenido a Tesis Cloud
+        </h1>
+        <p class="mt-4 text-center text-gray-700">
+          Sube, comparte y explora tesis en línea con facilidad.
+        </p>
         <div class="mt-6 text-center">
-          <button 
+          <button
             class="px-4 py-2 font-semibold text-white bg-blue-500 rounded hover:bg-blue-600"
-            onclick="window.location.href='/ruta-destino';">
+            onclick="window.location.href='/ruta-destino';"
+          >
             Comenzar
           </button>
         </div>
       </div>
-    </section>
-    
-    <!-- Sección Acerca de -->
+    </section> 
 
+    <body class="bg-[url('/img/img2.jpg')] bg-cover bg-center">
+      <div class="container mx-auto">
+        <h2 class="text-center text-3xl my-8">¿Por qué elegirnos?</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <img src="/img/img1.jpg" alt="Descripción de la imagen" class="h-48 w-full object-cover rounded-lg shadow-lg hover:scale-105 hover:border-4 hover:border-blue-500 transition-transform duration-300" />
+          <img src="/img/img3.jfif" alt="Descripción de la imagen" class="h-48 w-full object-cover rounded-lg shadow-lg hover:scale-105 hover:border-4 hover:border-blue-500 transition-transform duration-300" />
+          <img src="/img/img4.jfif" alt="Descripción de la imagen" class="h-48 w-full object-cover rounded-lg shadow-lg hover:scale-105 hover:border-4 hover:border-blue-500 transition-transform duration-300" />
+        </div>
+      </div>
+    </body>
+    
+    <Footer/>
+
+    <!--<footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4">
+
+        <section id="about" class="mb-8">
+          <h2 class="text-2xl font-bold text-center text-blue-400">
+            Acerca de
+          </h2>
+          <p class="mt-4 text-center text-gray-300">
+            Las tesis son trabajos académicos que se elaboran generalmente al
+            final de un programa de estudios universitarios avanzados...
+          </p>
+        </section>
+
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="mb-8 md:mb-0 text-center">
+            <i class="fas fa-phone-alt text-3xl text-blue-400"></i>
+            <h3 class="mt-2 text-xl font-semibold">Teléfono</h3>
+            <link
+              rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            />
+            <p class="text-gray-300">920658645</p>
+          </div>
+
+          <div class="text-center">
+            <i class="fas fa-map-marker-alt text-3xl text-blue-400"></i>
+            <a href="https://maps.app.goo.gl/7iEqBqNBVjhoHA3t5" target="_blank">
+              <h3 class="mt-2 text-xl font-semibold">Ubicación</h3>
+              <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+              />
+              <p class="text-gray-300">
+                Calle Los Rosales S/N – San Juan Bautista.
+              </p>
+            </a>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-facebook-f text-3xl text-blue-400"></i>
+          </a>
+          <h3 class="mt-2 text-xl font-semibold">Facebook</h3>
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+          />
+
+          <p class="mt-2 text-gray-400">Síguenos en Facebook</p>
+        </div>
+      </div>
+    </footer>-->
   </main>
 </Layout>
